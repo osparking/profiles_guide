@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: "development"
+
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - production
+  datasource:
+    url: jdbc:mysql://localhost/hamburger
+    
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - development
+  datasource:
+    url: jdbc:h2:mem:testdb
+    
